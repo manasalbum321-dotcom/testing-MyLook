@@ -5,11 +5,13 @@ from "https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js";
 
 // 🔥 Firebase config (same as signup)
 const firebaseConfig = {
-    apiKey: "AIzaSyDPlU4bi3FUyv16Hm2ZKn9QaYXN__n4u5E",
-    authDomain: "mylook-25be4.firebaseapp.com",
-    databaseURL: "https://mylook-25be4-default-rtdb.firebaseio.com",
-    projectId: "mylook-25be4",
-    appId: "1:334983389196:web:6932156aae4a7a14e2ce29",
+     apiKey: "AIzaSyBkH7gqLLLtvQfH8buj4LJmlIN9ypu4_Hc",
+    authDomain: "mylook-testing.firebaseapp.com",
+    projectId: "mylook-testing",
+    storageBucket: "mylook-testing.firebasestorage.app",
+    messagingSenderId: "326729149691",
+    appId: "1:326729149691:web:bbf601f07589912734d45e",
+    measurementId: "G-QGME0V3Q8S"
 };
 
 // Initialize Firebase
