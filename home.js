@@ -2,8 +2,15 @@ import { getDatabase, ref, onValue, get }
 from "https://www.gstatic.com/firebasejs/12.7.0/firebase-database.js";
 
 const db = getDatabase();
+const auth = getAuth(app);
 
 /* ================= COMMON SEARCH FUNCTION ================= */
+/* 🔐 AUTH */
+onAuthStateChanged(auth, (user) => {
+  if (!user) {
+    location.href = "login.html";
+    return;
+  }
 
 function attachSearch(inputEl, resultEl) {
   if (!inputEl || !resultEl) return;
