@@ -1,10 +1,31 @@
-import { getDatabase, ref, onValue, get } 
-from "https://www.gstatic.com/firebasejs/12.7.0/firebase-database.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
+import {
+  getDatabase,
+  ref,
+  onValue,
+  set,
+  remove
+} from "https://www.gstatic.com/firebasejs/12.7.0/firebase-database.js";
+import {
+  getAuth,
+  onAuthStateChanged
+} from "https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js";
 
-const db = getDatabase();
+/* 🔥 Firebase */
+const firebaseConfig = {
+  apiKey: "AIzaSyBkH7gqLLLtvQfH8buj4LJmlIN9ypu4_Hc",
+    authDomain: "mylook-testing.firebaseapp.com",
+    projectId: "mylook-testing",
+    storageBucket: "mylook-testing.firebasestorage.app",
+    messagingSenderId: "326729149691",
+    appId: "1:326729149691:web:bbf601f07589912734d45e",
+    measurementId: "G-QGME0V3Q8S"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
 const auth = getAuth(app);
 
-/* ================= COMMON SEARCH FUNCTION ================= */
 /* 🔐 AUTH */
 onAuthStateChanged(auth, (user) => {
   if (!user) {
