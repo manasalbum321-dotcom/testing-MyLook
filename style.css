@@ -336,6 +336,11 @@ body{
   align-items: center;
 }
 .notice {
-  margin-top: 1cm;
+  margin-top: 0.5cm;
+  margin:6px;
   color: red;
+}
+.notice {
+  margin:6px;
+  color: green;
 }
