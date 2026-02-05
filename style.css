@@ -335,3 +335,7 @@ body{
   display: flex;
   align-items: center;
 }
+.notice {
+  margin-top: 1cm;
+  color: red;
+}
