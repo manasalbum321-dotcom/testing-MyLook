@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Messages • MyLook</title>
+  <link rel="stylesheet" href="message.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<!-- 🔹 NAVBAR -->
+<nav class="navbar">
+  <div class="logo">MyLook</div>
+
+  <input type="text" class="search" placeholder="Search">
+
+  <div class="nav-icons">
+
+    <div class="icon-wrapper">
+      <a href="index.html">
+        <img src="https://i.pinimg.com/736x/ab/32/dc/ab32dc0c5e2c6111a8a52bf7adf9655d.jpg">
+      </a>
+    </div>
+
+    <div class="icon-wrapper">
+      <a href="notification.html">
+        <img src="https://i.pinimg.com/1200x/fc/2f/23/fc2f2334257f1aa31c5b0265ec2c540c.jpg">
+      </a>
+    </div>
+
+    <div class="icon-wrapper">
+      <a href="profile.html">
+        <img id="navProfilePic"
+          src="https://i.pinimg.com/736x/57/00/c0/5700c04197ee9a4372a35ef16eb78f4e.jpg">
+      </a>
+    </div>
+
+  </div>
+</nav>
+
+<!-- 🔹 APP -->
+<div class="app">
+
+  <!-- 📌 SIDEBAR (FOLLOWING USERS AUTO LOAD HERE) -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">Messages</div>
+  </div>
+
+  <!-- 💬 CHAT AREA -->
+  <div class="chat-area" id="chatArea" style="display:none;">
+        <div class="chat-header">
+  <span class="back-btn" onclick="goBack()">←</span>
+  <div class="chatheader">
+    <img id="chatUserPic" src=""> 
+   <div class="nameinfo">
+      <span id="chatName"></span>
+      <small id="chatLastSeen" class="last-seen"></small>
+    </div>
+  </div>
+  </div>
+
+    <div class="messages" id="messages"></div>
+    <div id="typingIndicator" class="typing-indicator">typing...</div>
+    <center><h6>ⓘYour messages will be deleted after 24 hours automatically.</h6></center>
+    <div class="chat-input">
+      <input
+        type="text"
+        id="messageInput"
+        placeholder="Message..."
+        autocomplete="off"
+      >
+      <button onclick="sendMessage()">Send</button>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- 🔥 SCRIPTS -->
+<script type="module" src="message.js"></script>
+<script type="module" src="notification.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyLook</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">MyLook</div>
+
+        <div class="search-wrapper">
+          <input type="text" id="searchInput" class="search" placeholder="Search">
+        </div>
+
+
+    <div class="nav-icons">
+  <div class="icon-wrapper" id="search">
+    <img src="https://i.pinimg.com/736x/55/85/8d/55858d6becd90d6742682cb76077c8ef.jpg" alt="search">
+  </div>
+
+    <div class="nav-icons" id="plus">
+  <div class="icon-wrapper">
+    <a href="message.html"><img src="https://i.pinimg.com/736x/31/f2/73/31f273bae266efeed7b94e31cf446f75.jpg" alt="Add"></a>
+    <span class="notification-dot"></span>
+  </div>
+
+  <div class="icon-wrapper" id="notify">
+    <a href="notification.html"><img src="https://i.pinimg.com/1200x/fc/2f/23/fc2f2334257f1aa31c5b0265ec2c540c.jpg" alt="Message"></a>
+    <span class="notification-dot"></span>
+  </div>
+
+  <div class="icon-wrapper" id="profile">
+    <a href="profile.html"><img id="navProfilePic" src="https://i.pinimg.com/736x/57/00/c0/5700c04197ee9a4372a35ef16eb78f4e.jpg" alt="Profile"></a>
+<script type="module" src="notification.js"></script>
+  </div>
+</div>
+
+  </nav>
+  <div id="searchResults" class="results"></div>
+  <input type="text" class="search2" id="search2" placeholder="Search">
+  <div id="searchResults2" class="results"></div>
+  <br>
+  <br>
+  <br>
+<div class="settings"><a href="settings.html"><img src="https://upload.wikimedia.org/wikipedia/commons/d/dc/Settings-icon-symbol-vector.png"></a></div>
+
+<div class="container" id="postContainer"></div>
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore-compat.js"></script>
+
+<script>
+// 1️⃣ Firebase config
+const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_PROJECT_ID.appspot.com",
+    messagingSenderId: "YOUR_SENDER_ID",
+    appId: "YOUR_APP_ID"
+};
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
+// 🔹 Local like state
+const likedPosts = {};
+
+// 🔹 Render post
+function renderPost(doc) {
+    const data = doc.data();
+    const postContainer = document.getElementById("postContainer");
+
+    const post = document.createElement("div");
+    post.className = "post";
+
+    const liked = likedPosts[doc.id];
+
+    // fallback
+    const profilePic = data.profilePic 
+    || `https://i.pravatar.cc/200?img=5` 
+    || `https://avatars.dicebear.com/api/avataaars/${username}.svg`;
+    const username = data.username || "Anonymous";
+
+    post.innerHTML = `
+        <div class="post-header">
+            <img class="profile-pic" src="${profilePic}" alt="profile">
+            <span class="username">${username}</span>
+        </div>
+
+        <p>${data.text}</p>
+
+        <img id="postImg" class="post-img" src="${data.image}" alt="post image">
+
+        <div class="like-section">
+            <img 
+              src="${
+                liked
+                ? 'https://i.pinimg.com/736x/8c/3b/7a/8c3b7a9497dd9bedd292c60e93f72965.jpg'
+                : 'https://i.pinimg.com/736x/a7/61/06/a76106529de1efcf7ab1a3d115da0418.jpg'
+              }"
+              class="like-btn"
+            >
+            <span class="like-count">${data.likes}</span>
+        </div>
+    `;
+
+    const btn = post.querySelector(".like-btn");
+    btn.onclick = () => {
+        if (!likedPosts[doc.id]) {
+            likedPosts[doc.id] = true;
+            btn.src = "https://i.pinimg.com/736x/8c/3b/7a/8c3b7a9497dd9bedd292c60e93f72965.jpg";
+
+            db.collection("posts").doc(doc.id).update({
+                likes: firebase.firestore.FieldValue.increment(1)
+            });
+        }
+    };
+
+    postContainer.appendChild(post);
+}
+
+// 🔹 Real-time listener
+db.collection("posts").orderBy("timestamp")
+.onSnapshot(snapshot => {
+    const postContainer = document.getElementById("postContainer");
+    postContainer.innerHTML = "";
+    snapshot.forEach(doc => renderPost(doc));
+});
+
+// 🔹 Demo auto post
+setInterval(() => {
+    const users = [
+        { name: "Saurabh Vishwakarma", img: 8 },
+        { name: "Vivek chaurashia", img: 24 },
+        { name: "Abhinay Yadav", img: 25 },
+        { name: "Manas Prajapati", img: 26 },
+        { name: "Nitish Kumar", img: 13 },
+        { name: "Ayush Yadav", img: 14 },
+        { name: "Ayush Mishra", img: 15 },
+        { name: "Shivam Soni", img: 16 },
+        { name: "Arpit chandra", img: 17 },
+        { name: "Atharva Mishra", img: 18 },
+        { name: "Sunny singh", img: 19 }
+    ];
+
+    const randomUser = users[Math.floor(Math.random() * users.length)];
+    const randomId = Date.now();
+
+    db.collection("posts").add({
+        username: randomUser.name,
+        profilePic: `https://i.pravatar.cc/100?img=${randomUser.img}`,
+        text: "Yeh Demo post hai abhi feed algorithm me work chal raha hai COMING SOON...                 Manage by Manas",
+        image: `https://picsum.photos/seed/${randomId}/400/250`,
+        likes: 0,
+        timestamp: firebase.firestore.Timestamp.now()
+    });
+
+}, 5000);
+
+</script>
+
+<style>
+.container { margin: 20px auto; }
+.post { background: #ffffff; padding: 15px; margin-bottom: 15px; border-radius: 15px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+.like-btn { height: 25px; width: 25px; image-resolution: cover; margin-top: 1px; cursor: pointer; }
+.like-count { margin-left: 10px; font-weight: bold; }
+.post img { align-self: center;}
+</style>
+
+
+<!-- ye search bar ka code hai hide or show -->
+<script>
+const searchIcon = document.getElementById("search");
+const searchBox = document.getElementById("search2");
+
+searchIcon.addEventListener("click", () => {
+    if (searchBox.style.display === "none" || searchBox.style.display === "") {
+        searchBox.style.display = "inline-block";
+        searchBox.focus();
+    } else {
+        searchBox.style.display = "none";
+    }
+});
+const searchuser = document.getElementById("searchResults2");
+
+searchIcon.addEventListener("click", () => {
+    if (searchuser.style.display === "none" || searchuser.style.display === "") {
+        searchuser.style.display = "inline-block";
+        searchuser.focus();
+    } else {
+        searchuser.style.display = "none";
+    }
+});
+</script>
+<script type="module" src="home.js"></script>
+</body>
+</html>

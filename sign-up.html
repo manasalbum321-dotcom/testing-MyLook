@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create new account</title>
+    <link rel="icon" href="#" type="image/png">
+    <link rel="stylesheet" href="loginstyle.css">
+    <script type="module" src="signup.js" defer></script>
+    </head>
+<body>
+      <div class="fun-con">
+        <div class="hand">
+          <img class="card c1">
+        <img class="card c2">
+        <img class="card c3">
+        <img class="card c4">
+        <img class="card c5">
+        </div>
+        <center><span>Join MyLook</span></center>
+    </div>
+    <div class="auth-container">
+  <div class="auth-box">
+
+    <h1 class="logo">MyLook</h1>
+    <p class="subtitle">Create your free account</p>
+
+    <!-- MESSAGE -->
+    <p id="msg" class="msg"></p>
+
+    <!-- FULL NAME -->
+    <input 
+      type="text" 
+      id="name" 
+      placeholder="Full name"
+      autocomplete="name"
+    >
+
+    <!-- EMAIL -->
+    <input 
+      type="email" 
+      id="email" 
+      placeholder="Email address"
+      autocomplete="email"
+    >
+
+    <!-- PASSWORD -->
+    <input 
+      type="password" 
+      id="password" 
+      placeholder="Password"
+      autocomplete="new-password"
+    >
+
+    <!-- CREATE ACCOUNT -->
+    <button onclick="signup()">Create Account</button>
+
+    <!-- SWITCH -->
+    <p class="switch">
+      Already have an account?
+      <a href="login.html">Login</a>
+    </p>
+
+  </div>
+</div>
+<script type="module" src="signup.js"></script>
+</body>
+</html>

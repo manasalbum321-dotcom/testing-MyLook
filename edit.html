@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Profile</title>
+  <link rel="stylesheet" href="edit-profile.css">
+  <script type="module" src="edit.js" defer></script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">MyLook</div>
+
+    <input type="text" class="search" placeholder="Search">
+
+     <div class="nav-icons" id="plus">
+  <div class="icon-wrapper">
+    <a href="message.html"><img src="https://i.pinimg.com/736x/31/f2/73/31f273bae266efeed7b94e31cf446f75.jpg" alt="Add"></a>
+    <span class="notification-dot"></span>
+  </div>
+
+  <div class="icon-wrapper" id="notify">
+     <a href="index.html"><img src="https://i.pinimg.com/736x/ab/32/dc/ab32dc0c5e2c6111a8a52bf7adf9655d.jpg" alt="Message"></a>
+    <span class="notification-dot"></span>
+  </div>
+
+  <div class="icon-wrapper" id="profile">
+    <a href="profile.html"><img id="navProfilePic" src="https://i.pinimg.com/736x/57/00/c0/5700c04197ee9a4372a35ef16eb78f4e.jpg" alt="Profile"></a>
+  </div>
+ </div>
+</nav>
+
+<div class="edit-profile-container">
+
+  <h2>Edit Profile</h2>
+
+  <!-- Profile Image -->
+  <div class="profile-pic">
+    <img id="profileImg" src="https://i.pinimg.com/736x/57/00/c0/5700c04197ee9a4372a35ef16eb78f4e.jpg" alt="Profile">
+    <label for="dp">Change Profile Photo</label>
+    <input type="file" id="dp" hidden>
+  </div>
+
+  <!-- Form -->
+  <form>
+    <div class="form-group">
+      <label>Name</label>
+      <input id="name" type="text" placeholder="Your Name">
+    </div>
+
+    <div class="form-group">
+      <label>Username</label>
+      <input id="username" type="text" placeholder="username">
+    </div>
+
+    <div class="form-group">
+      <label>Bio</label>
+      <textarea id="bio" placeholder="Write bio..."></textarea>
+      <small id="bioCount">0 / 40</small>
+    </div>
+
+    <div class="form-group">
+      <label>Email-Unchangeable</label>
+      <input id="email" type="email" placeholder="email@example.com">
+    </div>
+
+    <button type="submit">Save Changes</button>
+  </form>
+
+</div>
+<script type="module" src="edit.js"></script>
+<script type="module" src="notification.js"></script>
+</body>
+</html>

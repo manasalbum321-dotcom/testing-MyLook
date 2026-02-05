@@ -1,0 +1,212 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+
+/* NAVBAR */
+.navbar{
+  position: fixed;
+  background:#fff;
+  height:60px;
+  width: 100%;
+  padding:0 16px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  border-bottom:1px solid #ddd;
+}
+
+/* LOGO */
+.logo{
+  font-size:25px;
+  font-weight: 900;
+}
+
+/* SEARCH */
+.search{
+  width:220px;
+  padding:6px 10px;
+  border:1px solid hsl(0, 0%, 80%);
+  border-radius:5px;
+  outline: none;
+  font-size: 14px;
+}
+
+.search2{
+        position: fixed;
+        outline: none;
+        width: 100%;
+        height: 100%;
+        padding:6px 10px;
+        margin-top: 60px;
+        border-top:0.5px solid #ccc;
+        border-bottom:0.5px solid #ccc;
+        font-size: 18px;
+        align-self: start;
+        align-content: flex-start;
+        align-items: start;
+        position: initial;
+}
+
+/* MOBILE */
+@media (max-width:600px){
+  .search{
+    display:none;
+  }
+}
+/* MOBILE */
+@media (min-width:600px){
+  .search2{
+    display:none;
+  }
+  #search {
+    display: none;
+  }
+}
+
+
+/* new code */
+
+.nav-icons {
+  display: flex;
+  gap: 20px; /* space between icons */
+}
+
+.icon-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.icon-wrapper img {
+  width: 30px; /* adjust size as needed */
+  height: 30px;
+}
+
+#profile img {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  border: 0.5px solid rgb(136, 136, 136);
+}
+
+.notification-dot {
+  position: absolute;
+  bottom: -5px;   /* position under the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 9px;
+  height: 9px;
+  background-color: red;
+  border-radius: 50%;
+  border: 2px solid white; /* optional, makes it look like a small bubble */
+}
+
+#search{
+  cursor: pointer;
+}
+#search2{
+  display: none;
+}
+
+
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+.settings-container {
+  max-width: 420px;
+  margin: 15px auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+}
+button img {
+    height: 25px;
+    width: 25px;
+}
+
+.settings-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.setting-item span {
+  font-size: 16px;
+}
+
+.setting-item button {
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.setting-item:hover {
+  background: #f9f9f9;
+}
+
+.logout span {
+  color: red;
+  font-weight: bold;
+}
+
+/* DEKSTOP LE LIYE SETTINGS BY MANAS */
+
+@media (min-width:600px){
+    .settings-container{
+        max-width: fit-content;
+        background-color: #f5f5f5;
+    }
+    .setting-item{
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+        margin-left: 15px;
+        margin-right: 15px;
+        background-color: white;
+        border-radius: 15px;
+    }
+    .gride {
+        max-width: fit-content;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        margin: 20px;
+    }
+    .settings-container img {
+        width: 50px;
+        height: 50px;
+        order: 1;
+    }
+    .setting-item span {
+        font-size: 20px;
+        font-weight: bold;
+        order: 2;
+    }
+    .setting-item:hover {
+        border: 0.5px solid black;
+    }
+}

@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #f4f6f9, #eef1f6);
+  color: #222;
+  line-height: 1.65;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+
+/* Main Card */
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08),
+    0 1px 0 rgba(255, 255, 255, 0.6) inset;
+}
+
+/* Headings */
+h1 {
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  letter-spacing: -0.4px;
+}
+
+.updated {
+  font-size: 14px;
+  color: #7a7a7a;
+  margin-bottom: 35px;
+}
+
+/* Sections */
+section {
+  margin-bottom: 28px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+/* Section Titles */
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #111;
+  position: relative;
+}
+
+/* Text */
+p {
+  font-size: 15px;
+  color: #444;
+}
+
+/* Lists */
+ul {
+  margin-left: 22px;
+}
+
+ul li {
+  margin-bottom: 8px;
+  color: #444;
+}
+
+/* Footer */
+footer {
+  margin-top: 45px;
+  padding-top: 18px;
+  border-top: 1px solid #eee;
+  text-align: center;
+  font-size: 14px;
+  color: #888;
+}
+
+/* Subtle link style (if any) */
+a {
+  color: #4f7cff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .container {
+    margin: 20px;
+    padding: 25px;
+    border-radius: 14px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+}

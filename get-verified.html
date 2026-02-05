@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Apply for Verification</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+
+  <div class="apply-container">
+    <center>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"
+        alt="Verified Badge"
+      />
+    </center>
+
+    <h2>Apply for Verified Badge</h2>
+
+    <p class="subtitle">
+      Get a verified badge to show your authenticity.
+    </p>
+
+    <form class="apply-form">
+      <label>
+        Full Name
+        <input type="text" placeholder="Your full name" required />
+      </label>
+
+      <label>
+        Username
+        <input type="text" placeholder="@username" required />
+      </label>
+
+      <label>
+        Profile Link
+        <input type="url" placeholder="https://mylook.app/username" required />
+      </label>
+
+      <label>
+        Reason for Verification
+        <textarea
+          placeholder="Why should you be verified?"
+          required
+        ></textarea>
+      </label>
+
+      <button type="submit">Apply Now</button>
+    </form>
+
+    <p class="note">
+      Verification is reviewed manually. Approval may take 24–72 hours.
+    </p>
+
+    <p class="approved-by">
+      This request will be approved by the Owner & Founder of MyLook
+      <b>MANAS PRAJAPATI</b>
+    </p>
+  </div>
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+  }
+
+  .apply-container {
+    max-width: 420px;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  }
+
+  img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    margin: 0;
+    text-align: center;
+  }
+
+  .subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  .apply-form label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+
+  .apply-form input,
+  .apply-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  .apply-form textarea {
+    resize: none;
+    height: 90px;
+  }
+
+  .apply-form button {
+    width: 100%;
+    margin-top: 16px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #1da1f2;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+  .apply-form button:hover {
+    opacity: 0.9;
+  }
+
+  .note {
+    margin-top: 16px;
+    font-size: 12px;
+    color: #777;
+    text-align: center;
+  }
+
+  .approved-by {
+    margin-top: 18px;
+    font-size: 13px;
+    text-align: center;
+    color: #444;
+  }
+
+  /* 📱 Mobile friendly */
+  @media (max-width: 480px) {
+    .apply-container {
+      margin: 20px;
+      padding: 18px;
+    }
+  }
+
+  .status-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+/* STATUS COLORS */
+.status-pending {
+  background: #fff4cc;
+  color: #b8860b;
+}
+
+.status-approved {
+  background: #d2ffe7;
+  color: #0a8f4d;
+}
+
+.status-cancelled {
+  background: #ffd2d2;
+  color: #ff0000;
+}
+
+</style>
+<script type="module" src="get-verified.js"></script>
+</body>
+</html>

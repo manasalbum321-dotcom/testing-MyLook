@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Responsive Profile</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="profilestyle.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo">MyLook</div>
+
+    <input type="text" class="search" placeholder="Search">
+
+     <div class="nav-icons" id="plus">
+  <div class="icon-wrapper">
+    <a href="message.html"><img src="https://i.pinimg.com/736x/31/f2/73/31f273bae266efeed7b94e31cf446f75.jpg" alt="Add"></a>
+    <span class="notification-dot"></span>
+  </div>
+
+  <div class="icon-wrapper" id="notify">
+     <a href="index.html"><img src="https://i.pinimg.com/736x/ab/32/dc/ab32dc0c5e2c6111a8a52bf7adf9655d.jpg" alt="Message"></a>
+    <span class="notification-dot"></span>
+  </div>
+
+  <div class="icon-wrapper" id="profile">
+    <a href="createpost.html"><img src="https://i.pinimg.com/736x/fc/db/d8/fcdbd8837d477a375dea6cfab00bd150.jpg" alt="Profile"></a>
+  </div>
+ </div>
+</nav>
+
+<div class="container">
+    <center class="textpost"><span>Profile</span></center>
+    <div class="shadow">
+        <div class="profile-header">
+            <img id="profilePic" src="https://api.dicebear.com/7.x/avataaars/svg?seed=manas" alt="Profile">
+        <div class="info">
+            <div class="user-name">
+                <h2>
+                    <span class="name-text" id="name">Your Name</span><img
+                     id="verifiedBadge"
+                     class="verified-badge"
+                     src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"
+                     alt="verified">
+                 </h2>
+            </div>    
+                <p id="username">@manas.in</p>
+                <p id="bio">Add Bio</p>
+                </div>
+            </div>
+
+            <div class="profile-stats">
+            <div>
+            <h3 id="postsCount">0</h3>
+            <p>Posts</p>
+            </div>
+            <a id="followersLink" href="followers.html">
+            <div>
+            <h3 id="followersCount">0</h3>
+            <p>Followers</p>
+            </div>
+            </a>
+            <a id="followingLink" href="following.html">
+            <div>
+            <h3 id="followingCount">0</h3>
+            <p>Following</p>
+            </div>
+            </a>
+        </div>
+      <center>
+
+  <!-- OWN PROFILE BUTTONS -->
+  <div class="button" id="ownProfileBtns">
+    <button onclick="goNext()">Edit profile</button>
+        <script>
+            function goNext() {
+            window.location.href = "edit.html";
+    }
+        </script>
+
+    <button onclick="shareProfile()">Share profile</button>
+  </div>
+
+  <!-- OTHER USER PROFILE BUTTONS -->
+  <div class="button" id="otherProfileBtns" style="display:none;">
+    <button id="followBtn" type="button">Follow</button>
+    <button id="messageBtn">Message</button>
+  </div>
+
+
+    </center>  
+    </div>
+    <br>
+<!--  YE CODE PROFILE ADDITIONAL SETTING KE LIYE DESIGN BY MANAS -->
+    <div class="settings-container">
+  <h2>Settings</h2>
+  <div class="gride">
+        <div onclick="changePassword()" class="setting-item">
+            <span>Change Password</span>
+            <button><img src="https://i.pinimg.com/736x/a9/1e/0d/a91e0dd80a73112eb1e1aa8be8c329a2.jpg"></button>
+        </div>
+
+        <div onclick="verify()" class="setting-item verified">
+            <span>Get Verified</span>
+            <button><img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"></button>
+        </div>
+
+        <div onclick="help()" class="setting-item help">
+            <span>Help & Support</span>
+            <button><img src="https://i.pinimg.com/736x/e4/04/83/e4048367d71564d92e49a2f6abb3074c.jpg"></button>
+        </div>
+
+        <div onclick="logout()" class="setting-item logout">
+            <span>Log Out</span>
+            <button><img src="https://i.pinimg.com/1200x/eb/b7/9f/ebb79f49b616d3ca1597bdd4c840374e.jpg"></button>
+        </div>
+    </div>
+</div>
+<script type="module" src="settings.js"></script>
+
+<!-- CODE END -->
+</div> 
+<!-- <div class="planebox"></div>   -->
+<div class="posts">
+    <center class="textpost"><span>Posts</span></center>
+    <div class="postscroll">
+    <div class="profile-posts">
+        <div class="post"><img src="https://picsum.photos/300?1"></div>
+        <div class="post"><img src="https://picsum.photos/300?2"></div>
+        <div class="post"><img src="https://picsum.photos/300?3"></div>
+        <div class="post"><img src="https://picsum.photos/300?4"></div>
+        <div class="post"><img src="https://picsum.photos/300?5"></div>
+        <div class="post"><img src="https://picsum.photos/300?6"></div>
+        <div class="post"><img src="https://picsum.photos/300?7"></div>
+        <div class="post"><img src="https://picsum.photos/300?8"></div>
+        <div class="post"><img src="https://picsum.photos/300?9"></div>
+        <div class="post"><img src="https://picsum.photos/300?10"></div>
+        <div class="post"><img src="https://picsum.photos/300?11"></div>
+        <div class="post"><img src="https://picsum.photos/300?12"></div>
+        <div class="post"><img src="https://picsum.photos/300?13"></div>
+        <div class="post"><img src="https://picsum.photos/300?14"></div>
+        <div class="post"><img src="https://picsum.photos/300?15"></div>
+        <div class="post"><img src="https://picsum.photos/300?16"></div>
+        <div class="post"><img src="https://picsum.photos/300?17"></div>
+        <div class="post"><img src="https://picsum.photos/300?18"></div>
+        <div class="post"><img src="https://picsum.photos/300?19"></div>
+    </div>
+    </div>
+</div>
+<script type="module" src="profile.js"></script>
+<script type="module" src="verified.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Settings</title>
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo">MyLook</div>
+
+    <input type="text" class="search" placeholder="Search">
+
+    <div class="nav-icons" id="plus">
+  <div class="icon-wrapper">
+    <a href="message.html"><img src="https://i.pinimg.com/736x/31/f2/73/31f273bae266efeed7b94e31cf446f75.jpg" alt="Add"></a>
+    <span class="notification-dot"></span>
+  </div>
+
+  <div class="icon-wrapper" id="notify">
+    <a href="index.html"><img src="https://i.pinimg.com/736x/ab/32/dc/ab32dc0c5e2c6111a8a52bf7adf9655d.jpg" alt="Message"></a>
+  </div>
+
+  <div class="icon-wrapper" id="profile">
+    <a href="profile.html"><img id="navProfilePic" src="https://i.pinimg.com/736x/57/00/c0/5700c04197ee9a4372a35ef16eb78f4e.jpg" alt="Profile"></a>
+  </div>
+</div>
+
+  </nav>
+  <br>
+  <br>
+  <br>    
+
+<div class="settings-container">
+  <h2>Settings</h2>
+
+  <div class="gride">
+        <div onclick="goEdit()" class="setting-item">
+            <span>Edit Profile</span>
+            <button><img src="https://i.pinimg.com/736x/57/00/c0/5700c04197ee9a4372a35ef16eb78f4e.jpg" alt="Profile"></button>
+        </div>
+
+        <div onclick="changePassword()" class="setting-item">
+            <span>Change Password</span>
+            <button><img src="https://i.pinimg.com/736x/a9/1e/0d/a91e0dd80a73112eb1e1aa8be8c329a2.jpg"></button>
+        </div>
+
+        <div onclick="privacy()" class="setting-item">
+            <span>Privacy</span>
+            <button><img src="https://i.pinimg.com/736x/43/a3/d8/43a3d843e276e545124d020182f5f8d6.jpg"></button>
+        </div>
+
+        <div onclick="notif()" class="setting-item">
+            <span>Notifications</span>
+            <button><img src="https://i.pinimg.com/1200x/fc/2f/23/fc2f2334257f1aa31c5b0265ec2c540c.jpg"></button>
+        </div>
+
+        <div onclick="verify()" class="setting-item verified">
+            <span>Get Verified</span>
+            <button><img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"></button>
+        </div>
+
+        <div onclick="help()" class="setting-item help">
+            <span>Help & Support</span>
+            <button><img src="https://i.pinimg.com/736x/e4/04/83/e4048367d71564d92e49a2f6abb3074c.jpg"></button>
+        </div>
+
+        <div onclick="logout()" class="setting-item logout">
+            <span>Log Out</span>
+            <button><img src="https://i.pinimg.com/1200x/eb/b7/9f/ebb79f49b616d3ca1597bdd4c840374e.jpg"></button>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="settings.js"></script>
+<script type="module" src="notification.js"></script>
+</body>
+</html>

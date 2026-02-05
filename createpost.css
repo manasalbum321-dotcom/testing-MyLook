@@ -1,0 +1,205 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+
+/* NAVBAR */
+.navbar{
+  position: fixed;
+  background:#fff;
+  height:60px;
+  width: 100%;
+  padding:0 16px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  border-bottom:1px solid #ddd;
+}
+
+/* LOGO */
+.logo{
+  font-size:25px;
+  font-weight:bold;
+}
+
+/* SEARCH */
+.search{
+  width:220px;
+  padding:6px 10px;
+  border:1px solid hsl(0, 0%, 80%);
+  border-radius:5px;
+  outline: none;
+  font-size: 14px;
+}
+
+.search2{
+        position: fixed;
+        outline: none;
+        width: 100%;
+        height: 100%;
+        padding:6px 10px;
+        margin-top: 60px;
+        border-top:0.5px solid #ccc;
+        border-bottom:0.5px solid #ccc;
+        font-size: 18px;
+        align-self: start;
+        align-content: flex-start;
+        align-items: start;
+        position: initial;
+}
+
+/* MOBILE */
+@media (max-width:600px){
+  .search{
+    display:none;
+  }
+}
+/* MOBILE */
+@media (min-width:600px){
+  .search2{
+    display:none;
+  }
+  #search {
+    display: none;
+  }
+}
+
+
+/* new code */
+
+.nav-icons {
+  display: flex;
+  gap: 20px; /* space between icons */
+}
+
+.icon-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.icon-wrapper img {
+  width: 30px; /* adjust size as needed */
+  height: 30px;
+}
+#profile img {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  border: 0.5px solid rgb(136, 136, 136);
+}
+.notification-dot {
+  position: absolute;
+  bottom: -5px;   /* position under the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 9px;
+  height: 9px;
+  background-color: red;
+  border-radius: 50%;
+  border: 2px solid white; /* optional, makes it look like a small bubble */
+}
+
+
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+}
+
+body {
+  margin: 0;
+  background: #e5e7eb;
+  display: flex;
+  justify-content: center;   /* horizontal center only */
+}
+
+/* MAIN APP */
+#app {
+  width: 100%;
+  max-width: 480px;
+  min-height: 100vh;
+  background: #fff;
+}
+
+/* TOP BAR */
+#topbar {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.1cm 14px;
+  border-bottom: 1px solid #dbdbdb;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+/* SHARE BUTTON */
+#shareBtn {
+  background: none;
+  border: none;
+  color: #0095f6;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* CONTENT */
+#content {
+  padding: 16px;
+}
+
+/* IMAGE UPLOAD */
+#uploadBox {
+  width: 100%;
+  height: 260px;
+  border: 2px dashed #dbdbdb;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+#uploadText {
+  color: #737373;
+  font-size: 14px;
+}
+
+#preview {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+/* CAPTION */
+#caption {
+  width: 100%;
+  margin-top: 14px;
+  min-height: 90px;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 14px;
+}
+
+/* 💻 DESKTOP VIEW */
+@media (min-width: 768px) {
+  #topbar {
+    padding-top: 2.3cm;
+  }
+
+  #app {
+    border-radius: 14px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  }
+}
