@@ -3,9 +3,6 @@
   padding:0;
   box-sizing:border-box;
   font-family: Arial, sans-serif;
-  align-content: center;
-  align-items: center;
-  align-self: center;
 }
 ::-webkit-scrollbar{
     width: 0;
