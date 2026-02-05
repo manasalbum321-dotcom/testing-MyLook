@@ -12,7 +12,7 @@
 }
 
 body{
-  height: 100vh;
+  min-height: 100dvh;
   overflow: hidden;
   background:#f5f5f5;
 }
