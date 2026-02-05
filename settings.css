@@ -126,7 +126,7 @@ body {
 }
 
 .settings-container {
-  max-width: 420px;
+  max-width: fit-content;
   margin: 15px auto;
   background: #fff;
   border-radius: 10px;
