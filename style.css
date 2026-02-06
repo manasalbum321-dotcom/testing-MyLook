@@ -367,14 +367,31 @@ body {
 }
 
 /* Mobile: Full width edge to edge */
-@media (max-width: 768px) {
-  .post {
+.post {
     max-width: 100%;
+    width: 100vw;
+    margin: 0;
     border-radius: 0;
   }
 
   .post-img {
+    width: 100%;
+  }
+}
+
+
+/* 📱 Mobile: Full width edge-to-edge */
+@media (max-width: 768px) {
+
+  .post {
+    max-width: 100%;
     width: 100vw;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .post-img {
+    width: 100%;
   }
 }
 
