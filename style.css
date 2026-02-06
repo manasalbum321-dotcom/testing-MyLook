@@ -348,6 +348,54 @@ body {
   overflow-y: auto;
 }
 
+/* Post Container */
+.post {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+/* Post Image */
+.post-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 80vh;
+}
+
+/* 📱 Mobile: Full width edge-to-edge */
+@media (max-width: 768px) {
+
+  .post {
+    max-width: 100%;
+    width: 100vw;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .post-img {
+    width: 100%;
+  }
+}
+
+/* 💻 Desktop */
+@media (min-width: 769px) {
+
+  .post {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 20px auto;
+  }
+
+  .post-img {
+    object-fit: contain;
+    background: #000;
+  }
+}
 
 
 
