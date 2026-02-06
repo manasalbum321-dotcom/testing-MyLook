@@ -353,7 +353,7 @@ html, body {
   max-width: 600px;
   margin: 0 auto;
   background: #fff;
-  border-bottom: 6px solid #ddd;
+  border-bottom: 16px solid #f5f5f5;
   box-sizing: border-box;
 }
 
@@ -371,7 +371,7 @@ html, body {
   .post {
     max-width: 100%;
     margin: 0;
-    border-radius: 0;
+    border-radius: 14px;
     border-left: none;
     border-right: none;
   }
