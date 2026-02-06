@@ -368,7 +368,9 @@ html, body {
 
 /* 📱 Mobile Perfect Edge */
 @media (max-width: 768px) {
-
+  .container {
+    margin-bottom: 6px;
+  }
   .post {
     max-width: 100%;
     margin: 0;
