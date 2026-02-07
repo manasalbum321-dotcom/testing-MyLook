@@ -316,6 +316,7 @@ button {
         flex-direction: row;
         align-items: left;
         text-align: left;
+        background-color: red;
     }
     .settings-container{
       display: none;
