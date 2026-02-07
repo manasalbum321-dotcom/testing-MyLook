@@ -316,7 +316,6 @@ button {
         flex-direction: row;
         align-items: left;
         text-align: left;
-        background-color: red;
     }
     .settings-container{
       display: none;
@@ -331,7 +330,7 @@ button {
         width: 80px;
         height: 80px;
         margin-right: 10px;
-        margin-left: 160px;
+        margin-left: 10%;
     }
     .profile-stats {
         /* flex-direction: column; */
