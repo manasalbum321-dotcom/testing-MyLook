@@ -330,6 +330,7 @@ button {
         width: 80px;
         height: 80px;
         margin-right: 10px;
+        margin-left: 16px;
     }
     .profile-stats {
         /* flex-direction: column; */
