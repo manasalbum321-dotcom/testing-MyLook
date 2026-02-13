@@ -456,6 +456,7 @@ h6 {
 
 /* typing style */
 .typing-indicator {
+  background: rgba(255, 255, 255, 0);
   display: flex;
   justify-content: flex-start;
   padding: 8px 12px;
