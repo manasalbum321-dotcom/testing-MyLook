@@ -456,36 +456,26 @@ h6 {
 
 /* typing style */
 .typing-indicator {
-  width: fit-content;
-  display: flex;
-  justify-content: flex-start;
-  padding: 8px 12px;
+  display: inline-flex;
+  gap: 4px;
 }
 
-.typing-bubble {
-  padding: 8px 14px;
-  border-radius: 18px;
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  width: fit-content;
-}
-
-.typing-bubble span {
-  font-size: 14px;
+.typing-indicator span {
+  font-size: 16px;
   font-weight: 500;
+  color: #333; /* change if needed */
   opacity: 0.3;
   transform: scale(0.8);
-  animation: grow 1.5s infinite;
+  animation: grow 1.5s infinite ease-in-out;
 }
 
 /* Delay each letter */
-.typing-bubble span:nth-child(1) { animation-delay: 0s; }
-.typing-bubble span:nth-child(2) { animation-delay: 0.2s; }
-.typing-bubble span:nth-child(3) { animation-delay: 0.4s; }
-.typing-bubble span:nth-child(4) { animation-delay: 0.6s; }
-.typing-bubble span:nth-child(5) { animation-delay: 0.8s; }
-.typing-bubble span:nth-child(6) { animation-delay: 1s; }
+.typing-indicator span:nth-child(1) { animation-delay: 0s; }
+.typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+.typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+.typing-indicator span:nth-child(4) { animation-delay: 0.6s; }
+.typing-indicator span:nth-child(5) { animation-delay: 0.8s; }
+.typing-indicator span:nth-child(6) { animation-delay: 1s; }
 
 @keyframes grow {
   0%, 100% {
