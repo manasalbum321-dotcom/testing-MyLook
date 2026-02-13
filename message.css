@@ -463,7 +463,8 @@ h6 {
 .typing-indicator span {
   font-size: 16px;
   font-weight: 500;
-  color: #33333300;
+  color: #333;
+  background-color: #00000000;
   opacity: 0.3;
   transform: scale(0.8);
   animation: grow 1.5s infinite ease-in-out;
