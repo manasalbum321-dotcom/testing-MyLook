@@ -457,7 +457,7 @@ h6 {
 /* typing style */
 .typing-indicator {
   display: inline-flex;
-  gap: 4px;
+  gap: 1px;
 }
 
 .typing-indicator span {
