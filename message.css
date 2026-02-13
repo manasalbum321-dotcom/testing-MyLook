@@ -406,7 +406,6 @@ body {
   margin-top: -0.3cm;
 }
 .chatheader {
-  position: fixed;
   display: flex;
   flex-direction: row;
   gap: 10px;
