@@ -16,13 +16,10 @@ import {
 
 /* 🔥 Firebase */
 const firebaseConfig = {
-   apiKey: "AIzaSyBkH7gqLLLtvQfH8buj4LJmlIN9ypu4_Hc",
-    authDomain: "mylook-testing.firebaseapp.com",
-    projectId: "mylook-testing",
-    storageBucket: "mylook-testing.firebasestorage.app",
-    messagingSenderId: "326729149691",
-    appId: "1:326729149691:web:bbf601f07589912734d45e",
-    measurementId: "G-QGME0V3Q8S"
+  apiKey: "AIzaSyDPlU4bi3FUyv16Hm2ZKn9QaYXN__n4u5E",
+  authDomain: "mylook-25be4.firebaseapp.com",
+  databaseURL: "https://mylook-25be4-default-rtdb.firebaseio.com",
+  projectId: "mylook-25be4",
 };
 
 const app = initializeApp(firebaseConfig);
@@ -37,6 +34,8 @@ const chatName = document.getElementById("chatName");
 const chatUserPic = document.getElementById("chatUserPic");
 const chatLastSeen = document.getElementById("chatLastSeen");
 const messageInput = document.getElementById("messageInput");
+const typingIndicator = document.getElementById("typingIndicator");
+let typingTimeout;
 
 let myUid = "";
 let chatId = "";
@@ -190,6 +189,21 @@ async function openChat(uid) {
     chatArea.style.display = "flex";
   }
 
+  /* 👀 LISTEN TYPING (ONLINE SYSTEM KO TOUCH NAHI KARTA) */
+onValue(ref(db, "status/" + uid), (snap) => {
+  if (!snap.exists()) return;
+
+  const s = snap.val();
+
+  if (s.typing && s.typingTo === chatId) {
+    typingIndicator.style.display = "flex";
+    typingIndicator.scrollIntoView({ behavior: "smooth" });
+  } else {
+    typingIndicator.style.display = "none";
+  }
+});
+
+
   /* LOAD MESSAGES */
   onValue(ref(db, `chats/${chatId}/messages`), (snap) => {
     messagesDiv.innerHTML = "";
@@ -207,6 +221,28 @@ async function openChat(uid) {
   });
 }
 
+/* ✍️ TYPING SEND (STATUS NODE USE KARKE) */
+messageInput.addEventListener("input", () => {
+  if (!chatId) return;
+
+  const statusRef = ref(db, "status/" + myUid);
+
+  update(statusRef, {
+    typing: true,
+    typingTo: chatId
+  });
+
+  clearTimeout(typingTimeout);
+
+  typingTimeout = setTimeout(() => {
+    update(statusRef, {
+      typing: false,
+      typingTo: ""
+    });
+  }, 1500);
+});
+
+
 /* ✉️ SEND MESSAGE */
 window.sendMessage = () => {
   const text = messageInput.value.trim();
@@ -221,6 +257,12 @@ window.sendMessage = () => {
 
   messageInput.value = "";
 };
+
+update(ref(db, "status/" + myUid), {
+  typing: false,
+  typingTo: ""
+});
+
 
 /* 🧩 SHOW MESSAGE */
 function showMessage(msg) {
