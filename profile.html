@@ -79,6 +79,13 @@
         </script>
 
     <button onclick="shareProfile()">Share profile</button>
+      <script>
+function shareProfile() {
+  navigator.clipboard.writeText(window.location.href)
+    .then(() => alert('Profile link copied to clipboard!'))
+    .catch(() => alert('Failed to copy link.'));
+}
+</script>
   </div>
 
   <!-- OTHER USER PROFILE BUTTONS -->
