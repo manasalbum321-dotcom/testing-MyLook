@@ -36,11 +36,11 @@ body{
   font-weight: 900;
   display:flex;
   display:flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 .bta {
   font-size: 5px;
-  color: blue;
+  text-color: blue;
 }
 
 /* SEARCH */
