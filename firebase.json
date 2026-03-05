@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "public",   // HTML/CSS/JS files ka folder
+    "public": "public",   // apne HTML/CSS/JS files ka folder
     "ignore": [
       "firebase.json",
       "**/.*",
