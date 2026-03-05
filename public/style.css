@@ -34,6 +34,12 @@ body{
 .logo{
   font-size:25px;
   font-weight: 900;
+  display:flex;
+  display:flex;
+  flex-direction: row;
+}
+.bta {
+  font-size: 5px;
 }
 
 /* SEARCH */
