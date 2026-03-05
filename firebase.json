@@ -1,10 +1,16 @@
 {
   "hosting": {
-    "public": "public",   // apne HTML/CSS/JS files ka folder
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
     ]
   }
 }
