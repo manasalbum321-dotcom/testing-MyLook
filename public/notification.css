@@ -1,0 +1,258 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+
+/* NAVBAR */
+.navbar{
+  position: fixed;
+  background:#fff;
+  height:60px;
+  width: 100%;
+  padding:0 16px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  border-bottom:1px solid #ddd;
+}
+
+/* LOGO */
+.logo{
+  font-size:25px;
+  font-weight:bold;
+}
+
+/* SEARCH */
+.search{
+  width:220px;
+  padding:6px 10px;
+  border:1px solid hsl(0, 0%, 80%);
+  border-radius:5px;
+  outline: none;
+  font-size: 14px;
+}
+
+.search2{
+        position: fixed;
+        outline: none;
+        width: 100%;
+        height: 100%;
+        padding:6px 10px;
+        margin-top: 60px;
+        border-top:0.5px solid #ccc;
+        border-bottom:0.5px solid #ccc;
+        font-size: 18px;
+        align-self: start;
+        align-content: flex-start;
+        align-items: start;
+        position: initial;
+}
+
+/* MOBILE */
+@media (max-width:600px){
+  .search{
+    display:none;
+  }
+}
+/* MOBILE */
+@media (min-width:600px){
+  .search2{
+    display:none;
+  }
+  #search {
+    display: none;
+  }
+}
+
+
+/* new code */
+
+.nav-icons {
+  display: flex;
+  gap: 20px; /* space between icons */
+}
+
+.icon-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.icon-wrapper img {
+  width: 30px; /* adjust size as needed */
+  height: 30px;
+}
+#profile img {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  border: 0.5px solid rgb(136, 136, 136);
+}
+
+.notification-dot {
+  position: absolute;
+  bottom: -5px;   /* position under the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 9px;
+  height: 9px;
+  background-color: red;
+  border-radius: 50%;
+  border: 2px solid white; /* optional, makes it look like a small bubble */
+}
+
+body {
+  margin: 0;
+  background: #f2f2f2;
+}
+
+/* MAIN CONTAINER */
+.app {
+  width: 100%;
+  max-width: 480px;      /* mobile */
+  background: #fff;
+  min-height: 100vh;
+  margin: auto;
+}
+
+/* TOP BAR */
+.topbar {
+  padding: 14px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 1px solid #dbdbdb;
+  padding-top: 2cm;
+}
+
+/* SECTION TITLE */
+.section {
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #737373;
+}
+
+/* NOTIFICATION ROW */
+.notification {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+}
+
+.notification p {
+  flex: 1;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+/* AVATAR */
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* POST THUMB */
+.thumb {
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+/* FRIEND REQUEST */
+.content {
+  flex: 1;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+/* BUTTONS */
+button {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+button {
+  background: #f60000;
+  color: #fff;
+}
+
+/* 💻 DESKTOP VIEW */
+@media (min-width: 600px) {
+  body {
+    background: #e5e7eb;
+    padding: 0;
+  }
+
+  .app {
+    border-radius: 14px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+   }
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: 0.5px solid rgb(0, 0, 0);
+}
+.notify-box{
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    padding: 8px;
+    margin: 4px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    border: rgb(217, 217, 217) 0.1px solid;
+    border-radius: 14px;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2px;
+}
+.actions {
+    font-size: 14px;
+    margin-right: 1px;
+    margin-left: auto;
+    ;
+}
+.info span {
+    font-size: 14px;
+    color: gray;
+}
+.info b {
+    font-size: 16px;
+}
+.name-line {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.verified-badge {
+  flex-shrink: 0;
+}

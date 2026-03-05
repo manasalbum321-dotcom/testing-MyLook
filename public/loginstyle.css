@@ -1,0 +1,238 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+body{
+  height:100vh;
+  background: linear-gradient(135deg,#909090,#ffffff,#8a8a8a);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.auth-container{
+  width:100%;
+  padding:20px;
+}
+
+.auth-box{
+  max-width:380px;
+  margin:auto;
+  background:#fff;
+  padding:25px;
+  border-radius:14px;
+  box-shadow:0 20px 40px rgba(0,0,0,.2);
+  text-align:center;
+}
+
+.logo{
+  font-size:32px;
+  font-weight:700;
+  color:#333;
+}
+
+.subtitle{
+  font-size:14px;
+  color:#777;
+  margin-bottom:15px;
+}
+
+.msg{
+  min-height:18px;
+  margin-bottom:10px;
+  font-size:14px;
+}
+
+.auth-box input{
+  width:100%;
+  padding:12px 14px;
+  margin-bottom:14px;
+  border-radius:8px;
+  border:1px solid #ddd;
+  font-size:15px;
+}
+
+.auth-box input:focus{
+  border-color:#667eea;
+  outline:none;
+}
+
+.forgot {
+    text-align: right;
+    margin: -10px 0 16px;
+}
+
+.forgot a {
+    font-size: 14px;
+    color: rgba(255, 0, 0, 0.753);
+    text-decoration: none;
+}
+
+.forgot a:hover {
+    text-decoration: underline;
+}
+
+
+.auth-box button{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:8px;
+  background:#667eea;
+  color:#fff;
+  font-size:16px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.auth-box button:hover{
+  background:#5563d6;
+}
+
+.switch{
+  margin-top:15px;
+  font-size:14px;
+}
+
+.switch a{
+  color:#667eea;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.switch a:hover{
+  text-decoration:underline;
+}
+
+
+
+/* NEW CODE */
+.hand{
+    position:relative;
+    width:500px;
+    height:260px;
+}
+
+.card{
+    width:120px;
+    position:absolute;
+    bottom:0;
+    margin-bottom: 40px;
+    left:50%;
+    transform-origin: bottom center;
+    border-radius:10px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+    transition:0.3s;
+}
+
+/* Fan rotation */
+.c1{ transform: translateX(-220px) rotate(-25deg); }
+.c2{ transform: translateX(-130px) rotate(-12deg); }
+.c3{ transform: translateX(-40px) rotate(0deg); }
+.c4{ transform: translateX(50px) rotate(12deg); }
+.c5{ transform: translateX(140px) rotate(25deg); }
+
+/* Hover effect */
+.card:hover{
+    transform: translateY(-30px) scale(1.05);
+    z-index:10;
+}
+
+@media (max-width:600px) {
+  body {
+    display:flex ;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .hand {
+    width: 400px;
+    margin-top: 0;
+  }
+  .card {
+    width: 80px;
+    left: 40%;
+    margin-top: 0;
+  }
+  .fun-con {
+    height: 2cm;
+    margin-top: 0;
+  }
+  .auth-container {
+    margin-top: 120px;
+  }
+  span{
+    display: none;
+  }
+
+  .logo {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(
+        90deg,
+        #ffffff 25%,
+        #000000 37%,
+        #b1a9a9 63%
+    );
+    background-size: 400% 100%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+}
+
+@media (min-width:600px) {
+  .fun-con {
+  margin-left: 100px;
+  border-bottom: 1px solid rgb(150, 150, 150);
+  border-top: 1px solid rgb(150, 150, 150);
+  padding-bottom: 20px;
+  box-shadow: 5px black ;
+  }
+  span {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(150, 150, 150)
+  }
+  span {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(
+        90deg,
+        #8f8f8f 25%,
+        #ffffff 37%,
+        #898989 63%
+    );
+    background-size: 400% 100%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+}
