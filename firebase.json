@@ -1,16 +1,10 @@
 {
   "hosting": {
-    "public": "build",
+    "public": "public",   // HTML/CSS/JS files ka folder
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
     ]
   }
 }
